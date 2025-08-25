@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阅读漫画 - 漫画分享平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png">
+</head>
+<body>
+    <div class="viewer-container">
+        <header class="viewer-header">
+            <a href="view.html" class="back-btn">← 返回书柜</a>
+            <h1 id="comic-title">漫画标题</h1>
+            <div class="viewer-controls">
+                <button id="prev-page" class="control-btn">上一页</button>
+                <span id="page-counter">1 / 10</span>
+                <button id="next-page" class="control-btn">下一页</button>
+            </div>
+        </header>
+        
+        <main class="viewer-main">
+            <div class="comic-container">
+                <!-- 漫画内容将通过JS动态加载 -->
+                <div id="comic-loading" class="loading-indicator">
+                    <div class="spinner"></div>
+                    <p>正在加载漫画...</p>
+                </div>
+                
+                <div id="comic-content" class="comic-content hidden">
+                    <!-- 漫画内容将在这里显示 -->
+                </div>
+            </div>
+            
+            <div class="comic-info">
+                <h3>漫画信息</h3>
+                <p><strong>描述:</strong> <span id="comic-desc">漫画描述</span></p>
+                <p><strong>上传时间:</strong> <span id="upload-time">2025-08-25</span></p>
+                <p><strong>文件类型:</strong> <span id="file-type">PDF</span></p>
+            </div>
+        </main>
+        
+        <div class="fullscreen-controls">
+            <button id="fullscreen-btn" class="control-btn">全屏阅读</button>
+            <button id="zoom-in" class="control-btn">放大</button>
+            <button id="zoom-out" class="control-btn">缩小</button>
+        </div>
+    </div>
+    
+    <script src="scripts/ably.min.js"></script>
+    <script src="scripts/viewer.js"></script>
+</body>
+</html>
